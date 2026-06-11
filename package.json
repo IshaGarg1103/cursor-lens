@@ -1,0 +1,58 @@
+{
+  "name": "cursor-lens",
+  "version": "0.1.6",
+  "description": "Local-first coding-agent transcript analyzer and builder profile CLI.",
+  "author": "Isha Garg",
+  "type": "module",
+  "bin": {
+    "cursor-lens": "dist/src/cli.js",
+    "lens": "dist/src/cli.js"
+  },
+  "files": [
+    "dist/src",
+    "assets",
+    "README.md",
+    ".env.example"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/src/cli.js",
+    "lens": "node dist/src/cli.js",
+    "run": "node dist/src/cli.js run",
+    "scan": "node dist/src/cli.js scan",
+    "inspect": "node dist/src/cli.js inspect",
+    "analyze": "node dist/src/cli.js analyze",
+    "test": "node --test dist/**/*.test.js",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run check && npm run build"
+  },
+  "keywords": [
+    "cursor",
+    "coding-agents",
+    "agents",
+    "agent-transcripts",
+    "builder-profile",
+    "transcripts",
+    "analysis",
+    "local-first"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IshaGarg1103/cursor-lens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IshaGarg1103/cursor-lens/issues"
+  },
+  "homepage": "https://github.com/IshaGarg1103/cursor-lens#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "25.9.1",
+    "tsx": "4.22.4",
+    "typescript": "6.0.3"
+  }
+}
